@@ -15,8 +15,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // Animation parameters
-        animator.SetBool("walking", Input.GetAxisRaw("Horizontal") != 0);
-        spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Horizontal") < 0;
+        Vector2 inputVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        animator.SetBool("walking", inputVector.magnitude > 0);
+        spriteRenderer.flipX = inputVector.x != 0 && inputVector.x < 0;
     }
 
     void FixedUpdate()
