@@ -35728,6 +35728,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 119793862, guid: 51cf80b0300b27d4db38c24ee6efb7c9, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b8dd6b136a0c4da46ac0a27961709324, type: 2}
+    - target: {fileID: 119793862, guid: 51cf80b0300b27d4db38c24ee6efb7c9, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4985055775550511303, guid: b8dd6b136a0c4da46ac0a27961709324, type: 2}
     - target: {fileID: 2883070121753859785, guid: 51cf80b0300b27d4db38c24ee6efb7c9, type: 3}
       propertyPath: m_RootOrder
       value: 1
