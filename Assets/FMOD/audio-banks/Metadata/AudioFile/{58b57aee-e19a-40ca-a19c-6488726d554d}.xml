@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{58b57aee-e19a-40ca-a19c-6488726d554d}">
+		<property name="assetPath">
+			<value>SFX/talk.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.7979591836734694</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{66052af0-50e3-4109-96ea-60c251dad0af}</destination>
+		</relationship>
+	</object>
+</objects>
