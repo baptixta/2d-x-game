@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public GameObject initialCutscene;
 
     private void Awake()
     {
@@ -16,6 +18,13 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
+        }
+    }
+
+    private void Update() {
+        if (initialCutscene.activeSelf == false)
+        {   
+            SceneManager.LoadScene("Lobby");
         }
     }
 }

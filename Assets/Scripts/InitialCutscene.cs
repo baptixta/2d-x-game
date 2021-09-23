@@ -10,8 +10,4 @@ public class InitialCutscene : MonoBehaviour
     void OnEnable() {
         Player.GetComponent<PlayerMovement>().enabled = false;
     }
-
-    void OnDisable() {
-        Player.GetComponent<PlayerMovement>().enabled = true;
-    }
 }
