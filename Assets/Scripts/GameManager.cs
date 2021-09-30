@@ -21,10 +21,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Update() {
-        if (initialCutscene.activeSelf == false)
-        {   
-            SceneManager.LoadScene("Lobby");
-        }
+    public void LoadScene(string sceneName) {
+        SceneManager.LoadScene(sceneName);
     }
 }

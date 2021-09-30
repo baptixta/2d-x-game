@@ -8,6 +8,6 @@ public class InitialCutscene : MonoBehaviour
     [SerializeField] GameObject Player;
 
     void OnEnable() {
-        Player.GetComponent<PlayerMovement>().enabled = false;
+        Player.GetComponent<Player>().enabled = false;
     }
 }

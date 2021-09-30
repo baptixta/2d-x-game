@@ -388,10 +388,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2883070121753859799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb52ad8efd2f3634fbe513956cd81797, type: 3}
+  m_Script: {fileID: 11500000, guid: 279460310567b0349969786e50e3907e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  playerData: {fileID: 11400000, guid: 2c33f757712589642996683dfc799472, type: 2}
   rigidbody: {fileID: 2883070122988341980}
   animator: {fileID: 2883070121753859786}
   spriteRenderer: {fileID: 2883070121753859784}

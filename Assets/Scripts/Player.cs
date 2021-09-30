@@ -2,15 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    [Header("Movement")]
-    [SerializeField] float speed;
+    [Header("Data")]
+    [SerializeField] PlayerData playerData;
+    public static int currentLife{get; private set;}
+    private float currentSpeed;
 
     [Header("Component References")]
     [SerializeField] Rigidbody2D rigidbody;
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;
+
+    private void Start() {
+        currentLife = playerData.life;
+    }
 
     void Update()
     {
@@ -23,6 +29,14 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         // Applying velocity
-        rigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, Input.GetAxisRaw("Vertical") * speed);
+        rigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * playerData.speed, Input.GetAxisRaw("Vertical") * playerData.speed);
+    }
+
+    public static void ApplyDamage(int damage) {
+        currentLife -= damage;
+    }
+
+    public void SetBuff(float buff) {
+        currentSpeed = playerData.speed + buff;
     }
 }

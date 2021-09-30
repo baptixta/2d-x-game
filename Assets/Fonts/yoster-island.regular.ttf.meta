@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5b2f3385d788ad6459209acf7431ccc5
+guid: fac34b6682783914488156a74d3ac6c7
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Hamberger
+  - Yoster Island
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
