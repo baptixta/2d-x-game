@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] PlayerData playerData;
     public static int currentLife{get; private set;}
     private float currentSpeed;
+    public static bool playerControlsEnabled = true;
 
     [Header("Component References")]
     [SerializeField] Rigidbody2D rigidbody;
@@ -23,14 +24,27 @@ public class Player : MonoBehaviour
         // Animation parameters
         Vector2 inputVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         animator.SetBool("walking", inputVector.magnitude > 0);
-        spriteRenderer.flipX = inputVector.x != 0 && inputVector.x < 0;
+        spriteRenderer.flipX = inputVector.x != 0 && inputVector.x < 0;      
     }
 
     void FixedUpdate()
     {
-        // Applying velocity
-        rigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * playerData.speed, Input.GetAxisRaw("Vertical") * playerData.speed);
+        if (playerControlsEnabled) 
+        {
+            // Applying velocity
+            rigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * playerData.speed, Input.GetAxisRaw("Vertical") * playerData.speed);
+        }
+        else 
+        {
+             StartCoroutine(StopMoving());        
+        }        
     }
+
+    IEnumerator StopMoving() 
+    {
+        rigidbody.velocity = new Vector2(0, 0);
+        yield return new WaitForSeconds(3f);        
+    }   
 
     public static void ApplyDamage(int damage) {
         currentLife -= damage;

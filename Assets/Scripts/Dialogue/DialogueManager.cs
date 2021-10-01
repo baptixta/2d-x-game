@@ -9,8 +9,10 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text dialogueText;
     public Animator animator;
     private Queue<string> sentences;
+    public static DialogueManager instance;
     void Start()
     {
+        instance = this;
         sentences = new Queue<string>();
     }
 
@@ -55,8 +57,17 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public delegate void OnEndDialogue();
+    public event OnEndDialogue onEndDialogueEvent;
+
     public void EndDialogue() 
     {
         animator.SetBool("IsOpen", false);
+        Player.playerControlsEnabled = true;
+
+        if (onEndDialogueEvent != null)
+        {
+            onEndDialogueEvent.Invoke();
+        }
     }
 }

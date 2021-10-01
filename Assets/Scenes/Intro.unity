@@ -528,8 +528,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5177697622469370812, guid: dfce27bf6ecd64f4ea67a669b0858b47, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177697622469370812, guid: dfce27bf6ecd64f4ea67a669b0858b47, type: 3}
       propertyPath: orthographic size
       value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177697622469370812, guid: dfce27bf6ecd64f4ea67a669b0858b47, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.10980392
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177697622469370812, guid: dfce27bf6ecd64f4ea67a669b0858b47, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.06666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177697622469370812, guid: dfce27bf6ecd64f4ea67a669b0858b47, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.13725491
       objectReference: {fileID: 0}
     - target: {fileID: 5177697622469370813, guid: dfce27bf6ecd64f4ea67a669b0858b47, type: 3}
       propertyPath: m_RootOrder
