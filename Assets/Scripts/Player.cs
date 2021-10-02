@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Player : MonoBehaviour
     [SerializeField] Rigidbody2D rigidbody;
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;
+
+    [SerializeField] GameObject levelTransition;
 
     private void Start() {
         currentLife = playerData.life;
@@ -52,5 +55,19 @@ public class Player : MonoBehaviour
 
     public void SetBuff(float buff) {
         currentSpeed = playerData.speed + buff;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag == "Level01") {
+            animator.SetBool("disappear", true);            
+            levelTransition.SetActive(true);  
+            playerControlsEnabled = false;
+            StartCoroutine(GotoLevel());          
+        }
+    }
+
+    IEnumerator GotoLevel() {
+        yield return new WaitForSeconds(1.5f);        
+        SceneManager.LoadScene("Level01");        
     }
 }
