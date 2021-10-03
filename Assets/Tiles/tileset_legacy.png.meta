@@ -3187,7 +3187,7 @@ TextureImporter:
       name: tileset_legacy_1
       rect:
         serializedVersion: 2
-        x: 17
+        x: 18
         y: 527
         width: 16
         height: 16
@@ -3544,7 +3544,7 @@ TextureImporter:
       name: tileset_legacy_18
       rect:
         serializedVersion: 2
-        x: 306
+        x: 307
         y: 527
         width: 16
         height: 16
@@ -3565,7 +3565,7 @@ TextureImporter:
       name: tileset_legacy_19
       rect:
         serializedVersion: 2
-        x: 323
+        x: 324
         y: 527
         width: 16
         height: 16
@@ -3586,7 +3586,7 @@ TextureImporter:
       name: tileset_legacy_20
       rect:
         serializedVersion: 2
-        x: 340
+        x: 341
         y: 527
         width: 16
         height: 16
@@ -3838,7 +3838,7 @@ TextureImporter:
       name: tileset_legacy_32
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 510
         width: 16
         height: 16
@@ -3859,7 +3859,7 @@ TextureImporter:
       name: tileset_legacy_33
       rect:
         serializedVersion: 2
-        x: 17
+        x: 18
         y: 510
         width: 16
         height: 16
@@ -3880,7 +3880,7 @@ TextureImporter:
       name: tileset_legacy_34
       rect:
         serializedVersion: 2
-        x: 34
+        x: 35
         y: 510
         width: 16
         height: 16
@@ -4216,7 +4216,7 @@ TextureImporter:
       name: tileset_legacy_50
       rect:
         serializedVersion: 2
-        x: 306
+        x: 307
         y: 510
         width: 16
         height: 16
@@ -4237,7 +4237,7 @@ TextureImporter:
       name: tileset_legacy_51
       rect:
         serializedVersion: 2
-        x: 323
+        x: 324
         y: 510
         width: 16
         height: 16
@@ -4258,7 +4258,7 @@ TextureImporter:
       name: tileset_legacy_52
       rect:
         serializedVersion: 2
-        x: 340
+        x: 341
         y: 510
         width: 16
         height: 16
@@ -4888,7 +4888,7 @@ TextureImporter:
       name: tileset_legacy_82
       rect:
         serializedVersion: 2
-        x: 306
+        x: 307
         y: 493
         width: 16
         height: 16
@@ -4909,7 +4909,7 @@ TextureImporter:
       name: tileset_legacy_83
       rect:
         serializedVersion: 2
-        x: 323
+        x: 324
         y: 493
         width: 16
         height: 16
@@ -4930,7 +4930,7 @@ TextureImporter:
       name: tileset_legacy_84
       rect:
         serializedVersion: 2
-        x: 340
+        x: 341
         y: 493
         width: 16
         height: 16

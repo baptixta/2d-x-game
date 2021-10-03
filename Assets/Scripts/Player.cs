@@ -67,7 +67,8 @@ public class Player : MonoBehaviour
     }
 
     IEnumerator GotoLevel() {
-        yield return new WaitForSeconds(1.5f);        
+        yield return new WaitForSeconds(1.5f);
+        playerControlsEnabled = true;
         SceneManager.LoadScene("Level01");        
     }
 }
