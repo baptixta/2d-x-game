@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: are you listening to me?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 45727f85719f57a45903356e31417efa, type: 2}
-  m_sharedMaterial: {fileID: -2463146420659459683, guid: 45727f85719f57a45903356e31417efa, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -222,8 +222,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 45727f85719f57a45903356e31417efa, type: 2}
-  m_sharedMaterial: {fileID: -2463146420659459683, guid: 45727f85719f57a45903356e31417efa, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -376,8 +376,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: why are you scared?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 45727f85719f57a45903356e31417efa, type: 2}
-  m_sharedMaterial: {fileID: -2463146420659459683, guid: 45727f85719f57a45903356e31417efa, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -530,8 +530,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: do you really know yourself?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 45727f85719f57a45903356e31417efa, type: 2}
-  m_sharedMaterial: {fileID: -2463146420659459683, guid: 45727f85719f57a45903356e31417efa, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -684,8 +684,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: why do you think that?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 45727f85719f57a45903356e31417efa, type: 2}
-  m_sharedMaterial: {fileID: -2463146420659459683, guid: 45727f85719f57a45903356e31417efa, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -929,7 +929,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1085,8 +1085,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: why are you anxious?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 45727f85719f57a45903356e31417efa, type: 2}
-  m_sharedMaterial: {fileID: -2463146420659459683, guid: 45727f85719f57a45903356e31417efa, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

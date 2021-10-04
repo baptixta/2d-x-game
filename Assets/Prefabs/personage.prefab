@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 45727f85719f57a45903356e31417efa, type: 2}
-  m_sharedMaterial: {fileID: -2463146420659459683, guid: 45727f85719f57a45903356e31417efa, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -248,7 +248,6 @@ GameObject:
   - component: {fileID: 2883070122988341980}
   - component: {fileID: 2883070122988341982}
   - component: {fileID: 2883070122988341978}
-  - component: {fileID: 428222020}
   m_Layer: 0
   m_Name: personage
   m_TagString: Untagged
@@ -291,7 +290,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -395,18 +394,7 @@ MonoBehaviour:
   rigidbody: {fileID: 2883070122988341980}
   animator: {fileID: 2883070121753859786}
   spriteRenderer: {fileID: 2883070121753859784}
---- !u!114 &428222020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2883070121753859799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b47cc99b3ee554cbac16f62d497eb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  levelTransition: {fileID: 0}
 --- !u!1001 &8672277245442971095
 PrefabInstance:
   m_ObjectHideFlags: 0
