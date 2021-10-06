@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerData : ScriptableObject
 {
     public float speed;
+
+    public float dashSpeed;
     
     [Min(0)]public int life;
 }

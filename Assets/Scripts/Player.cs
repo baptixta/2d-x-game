@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public static int currentLife{get; private set;}
     private float currentSpeed;
     public static bool playerControlsEnabled = true;
+    public static bool isDashing = false;
 
     [Header("Component References")]
     [SerializeField] Rigidbody2D rigidbody;
@@ -27,15 +28,20 @@ public class Player : MonoBehaviour
         // Animation parameters
         Vector2 inputVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         animator.SetBool("walking", inputVector.magnitude > 0);
-        spriteRenderer.flipX = inputVector.x != 0 && inputVector.x < 0;      
+        spriteRenderer.flipX = inputVector.x != 0 && inputVector.x < 0; 
+
+        if (isDashing) 
+        {
+            rigidbody.AddForce(transform.up * playerData.dashSpeed);
+        } 
     }
 
     void FixedUpdate()
     {
-        if (playerControlsEnabled) 
+        if (playerControlsEnabled && isDashing == false) 
         {
             // Applying velocity
-            rigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * playerData.speed, Input.GetAxisRaw("Vertical") * playerData.speed);
+            rigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * playerData.speed, Input.GetAxisRaw("Vertical") * playerData.speed);            
         }
         else 
         {
@@ -57,13 +63,34 @@ public class Player : MonoBehaviour
         currentSpeed = playerData.speed + buff;
     }
 
+
     private void OnTriggerEnter2D(Collider2D other) {
+        // Collider da fase 1 no lobby
         if (other.tag == "Level01") {
             animator.SetBool("disappear", true);            
             levelTransition.SetActive(true);  
             playerControlsEnabled = false;
             StartCoroutine(GotoLevel());          
         }
+
+        // Collider do Dash
+        if (other.tag == "dash")
+        {            
+            Dash();
+            other.gameObject.GetComponent<Animator>().SetTrigger("dash");
+        }
+    }
+
+    // Dash do Player
+    public void Dash() 
+    {
+        isDashing = true;        
+        StartCoroutine(StopDash());
+    }
+
+    IEnumerator StopDash() {
+        yield return new WaitForSeconds(0.5f);
+        isDashing = false;
     }
 
     IEnumerator GotoLevel() {
