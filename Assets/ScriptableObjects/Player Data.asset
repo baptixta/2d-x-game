@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Player Data
   m_EditorClassIdentifier: 
   speed: 5
-  dashSpeed: 235
+  dashSpeed: 200
   life: 10

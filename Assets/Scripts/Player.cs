@@ -19,8 +19,12 @@ public class Player : MonoBehaviour
 
     [SerializeField] GameObject levelTransition;
 
+    private void Awake() {
+        levelTransition.GetComponent<Animator>().SetBool("appear", true);
+    }
+
     private void Start() {
-        currentLife = playerData.life;
+        currentLife = playerData.life;        
     }
 
     void Update()
@@ -45,7 +49,7 @@ public class Player : MonoBehaviour
         }
         else 
         {
-             StartCoroutine(StopMoving());        
+            StartCoroutine(StopMoving());        
         }        
     }
 
@@ -66,11 +70,11 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         // Collider da fase 1 no lobby
-        if (other.tag == "Level01") {
-            animator.SetBool("disappear", true);            
-            levelTransition.SetActive(true);  
+        if (other.tag == "LevelTransition") {
+            animator.SetBool("disappear", true);             
+            levelTransition.GetComponent<Animator>().SetBool("disappear", true);              
             playerControlsEnabled = false;
-            StartCoroutine(GotoLevel());          
+            StartCoroutine(GotoLevel("Level01"));          
         }
 
         // Collider do Dash
@@ -93,9 +97,9 @@ public class Player : MonoBehaviour
         isDashing = false;
     }
 
-    IEnumerator GotoLevel() {
+    IEnumerator GotoLevel(string sceneName) {
         yield return new WaitForSeconds(1.5f);
         playerControlsEnabled = true;
-        SceneManager.LoadScene("Level01");        
+        SceneManager.LoadScene(sceneName);        
     }
 }

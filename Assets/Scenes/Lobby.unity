@@ -49620,7 +49620,7 @@ GameObject:
   - component: {fileID: 1421411705}
   m_Layer: 0
   m_Name: EnterLevel01
-  m_TagString: Level01
+  m_TagString: LevelTransition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50038,7 +50038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1633241912
 RectTransform:
   m_ObjectHideFlags: 0
