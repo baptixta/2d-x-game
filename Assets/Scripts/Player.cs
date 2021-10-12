@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private float currentSpeed;
     public static bool playerControlsEnabled = true;
     public static bool isDashing = false;
+    public Rigidbody2D projectileHeart;
 
     [Header("Component References")]
     [SerializeField] Rigidbody2D rigidbody;
@@ -18,6 +19,8 @@ public class Player : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
 
     [SerializeField] GameObject levelTransition;
+
+
 
     private void Awake() {
         levelTransition.GetComponent<Animator>().SetBool("appear", true);
@@ -37,6 +40,14 @@ public class Player : MonoBehaviour
         if (isDashing) 
         {
             rigidbody.AddForce(transform.up * playerData.dashSpeed);
+        }
+
+        // Shooting Hearts 
+        if (Input.GetMouseButtonDown(0))
+        {
+            Rigidbody2D clone;
+            clone = Instantiate(projectileHeart, transform.position, transform.rotation);
+            clone.velocity = transform.TransformDirection(Vector3.forward * 10);
         } 
     }
 

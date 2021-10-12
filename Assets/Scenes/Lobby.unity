@@ -48956,6 +48956,10 @@ PrefabInstance:
       propertyPath: levelTransition
       value: 
       objectReference: {fileID: 1633241911}
+    - target: {fileID: 2883070122988341978, guid: 51cf80b0300b27d4db38c24ee6efb7c9, type: 3}
+      propertyPath: projectileHeart
+      value: 
+      objectReference: {fileID: 624567048224057740, guid: e4f4bc832a44c8e40b245d94ed8020d6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51cf80b0300b27d4db38c24ee6efb7c9, type: 3}
 --- !u!1 &1247806241
